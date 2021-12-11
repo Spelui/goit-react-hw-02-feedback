@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import s from "./StatisticsItem.module.scss";
 
 const StatisticsItem = ({ itemText, value }) => {
   return (
-    <li>
-      <p>
+    <li className="s.item">
+      <p className={s.text}>
         {itemText}: <span>{value}</span>
       </p>
     </li>

@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
 import StatisticsItem from "./StatisticsItem/StatisticsItem";
 import Notification from "../Notification/Notification";
+import s from "./Statistics.module.scss";
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <>
-      <h2>Statistics</h2>
+      <h2 className="s.title">Statistics</h2>
       {!total ? (
         <Notification />
       ) : (
-        <ul>
+        <ul className={s.list}>
           <StatisticsItem itemText="Good" value={good} />
           <StatisticsItem itemText="Neutral" value={neutral} />
           <StatisticsItem itemText="Bad" value={bad} />
